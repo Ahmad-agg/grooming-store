@@ -1,0 +1,55 @@
+name: CI – API & Web
+
+on:
+  push:
+    branches:
+      - main
+      - feat/web-scaffold
+  pull_request:
+    branches:
+      - main
+      - feat/web-scaffold
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install API dependencies
+        working-directory: apps/api
+        run: npm ci
+
+      - name: Run API tests
+        working-directory: apps/api
+        run: npm test
+
+      - name: Install Web dependencies
+        working-directory: apps/web
+        run: npm ci
+
+      - name: Build Web (Vite)
+        working-directory: apps/web
+        env:
+          VITE_API_URL: "http://localhost:3001"
+        run: npm run build
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Deploy placeholder
+        run: |
+          echo "Here we will deploy to server/PM2/Nginx later."
