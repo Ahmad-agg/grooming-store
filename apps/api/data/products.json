@@ -1,0 +1,36 @@
+[
+  {
+    "id": "p_101",
+    "title": "Precision Razor",
+    "slug": "precision-razor",
+    "description": "Stainless steel handle with balanced weight.",
+    "price": 29.99,
+    "currency": "USD",
+    "category_id": "c_razors",
+    "brand": "GroomPro",
+    "rating": 4.6,
+    "thumbnail": "/images/p/p_101_main.jpg",
+    "images": [
+      { "url": "/images/p/p_101_main.jpg", "alt": "Front" }
+    ],
+    "inventory": { "sku": "RZ-PR-001", "quantity": 12, "status": "IN_STOCK" },
+    "badges": ["SALE"],
+    "created_at": "2025-09-01T10:00:00Z"
+  },
+  {
+    "id": "p_102",
+    "title": "Pro Trimmer X",
+    "slug": "pro-trimmer-x",
+    "description": "Cordless with long-lasting battery.",
+    "price": 59.00,
+    "currency": "USD",
+    "category_id": "c_trimmers",
+    "brand": "EdgeMax",
+    "rating": 4.3,
+    "thumbnail": "/images/p/p_102_main.jpg",
+    "images": [],
+    "inventory": { "sku": "TR-PX-100", "quantity": 0, "status": "OUT_OF_STOCK" },
+    "badges": ["OUT_OF_STOCK"],
+    "created_at": "2025-08-25T10:00:00Z"
+  }
+]

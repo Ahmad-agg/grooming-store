@@ -1,0 +1,6 @@
+[
+  { "id": "c_razors",   "name": "Razors",   "slug": "razors",   "hero_image": "/images/c/razors-hero.jpg",   "count": 42 },
+  { "id": "c_trimmers", "name": "Trimmers", "slug": "trimmers", "hero_image": "/images/c/trimmers-hero.jpg", "count": 18 },
+  { "id": "c_blades",   "name": "Blades",   "slug": "blades",   "hero_image": "/images/c/blades-hero.jpg",   "count": 25 },
+  { "id": "c_care",     "name": "Skin Care","slug": "skin-care","hero_image": "/images/c/care-hero.jpg",     "count": 15 }
+]
